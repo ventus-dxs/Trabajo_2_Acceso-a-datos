@@ -1,6 +1,7 @@
 from peewee import *# type: ignore
 from playhouse.postgres_ext import *# type: ignore
 from models.visitantes_model import VisitantesModel
+from models.tickets_model import TicketsModel
 
 
 class VisitantesRepo:
@@ -15,8 +16,8 @@ class VisitantesRepo:
         except Exception as e:
             print(f"Error insertando al visitante: {e}")
             return None
-   
-        
+
+
     @staticmethod
     def Buscar_todo_visitantes():
 

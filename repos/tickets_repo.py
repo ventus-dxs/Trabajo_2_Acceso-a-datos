@@ -1,6 +1,7 @@
 from peewee import *# type: ignore
 from playhouse.postgres_ext import *# type: ignore
 from models.tickets_model import TicketsModel
+from models.visitantes_model import VisitantesModel
 
 
 class TicketsRepo:
