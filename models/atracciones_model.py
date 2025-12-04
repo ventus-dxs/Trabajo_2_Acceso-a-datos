@@ -4,8 +4,8 @@ from playhouse.postgres_ext import *# type: ignore
 from datetime import datetime
 
 
-class Atracciones(BaseModel):
-    id = AutoField()
+class AtraccionesModel(BaseModel):
+    
 
     nombre = CharField(unique=True, null=False)
     tipo = CharField()  

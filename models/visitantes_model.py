@@ -4,7 +4,7 @@ from playhouse.postgres_ext import *# type: ignore
 from datetime import datetime
 
 
-class UserModel(BaseModel):
+class VisitantesModel(BaseModel):
     nombre = CharField(null=False)
     email = CharField(unique=True)
     altura = IntegerField()
