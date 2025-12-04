@@ -8,8 +8,8 @@ class Atracciones(BaseModel):
     id = AutoField()
 
     nombre = CharField(unique=True, null=False)
-    tipo = CharField()  # extrema, familiar, infantil, acuatica
-    altura_minima = IntegerField()  # en cm
+    tipo = CharField()  
+    altura_minima = IntegerField()  
 
     detalles = BinaryJSONField(null=True, default={# type: ignore
     
@@ -25,4 +25,4 @@ class Atracciones(BaseModel):
     })
 
     activa = BooleanField(default=True)
-    fecha_inauguracion = DateField(default=date.today) #type: ignore
+    fecha_inauguracion = DateField(default=datetime) #type: ignore

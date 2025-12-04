@@ -7,7 +7,7 @@ from datetime import datetime
 class UserModel(BaseModel):
     nombre = CharField(null=False)
     email = CharField(unique=True)
-    altura = int
+    altura = IntegerField()
     fecha_registro = datetime
     preferencias = BinaryJSONField(null=True, default={# type: ignore
     

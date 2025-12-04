@@ -23,7 +23,7 @@ class Tickets(BaseModel):
     fecha_compra = DateTimeField(default=datetime.utcnow)
     fecha_visita = DateField()
 
-    tipo_ticket = CharField()  # general, colegio, empleado
+    tipo_ticket = CharField() 
 
     detalles_compra = BinaryJSONField(null=True, default={# type: ignore
     "precio": 45.99,
