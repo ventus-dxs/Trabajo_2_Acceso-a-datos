@@ -15,3 +15,9 @@ class AtraccionesRepo:
         except Exception as e:
             print(f"Error insertando la atraccion: {e}")
             return None
+        
+    
+    @staticmethod
+    def Buscar_todo_atracciones():
+
+            return list(AtraccionesModel.select())

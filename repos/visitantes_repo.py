@@ -15,3 +15,9 @@ class VisitantesRepo:
         except Exception as e:
             print(f"Error insertando al visitante: {e}")
             return None
+   
+        
+    @staticmethod
+    def Buscar_todo_visitantes():
+
+            return list(VisitantesModel.select())

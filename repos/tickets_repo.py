@@ -15,3 +15,9 @@ class TicketsRepo:
         except Exception as e:
             print(f"Error insertando el ticket: {e}")
             return None
+        
+    
+    @staticmethod
+    def Buscar_todo_tickets():
+
+            return list(TicketsModel.select())
