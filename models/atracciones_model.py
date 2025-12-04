@@ -11,7 +11,7 @@ class Atracciones(BaseModel):
     tipo = CharField()  # extrema, familiar, infantil, acuatica
     altura_minima = IntegerField()  # en cm
 
-    preferencias = BinaryJSONField(null=True, default={# type: ignore
+    detalles = BinaryJSONField(null=True, default={# type: ignore
     
     "duracion_segundos": 60,
     "capacidad_por_turno": 24,
