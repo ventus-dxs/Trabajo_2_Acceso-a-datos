@@ -1,5 +1,4 @@
-# Menu de uso de la base de datos
-# Basado en la estructura del proyecto Trabajo_2_Acceso-a-datos
+
 
 from database import db
 from repos.visitantes_repo import VisitantesRepo
