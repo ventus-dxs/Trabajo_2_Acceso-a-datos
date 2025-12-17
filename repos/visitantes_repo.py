@@ -35,3 +35,13 @@ class VisitantesRepo:
             .distinct()
         )
         return list(query)
+
+
+    @staticmethod
+    def eliminar_visitante(visitante_id):
+        visitante = VisitantesModel.get_or_none(VisitantesModel.id == visitante_id)
+
+        if visitante:
+            visitante.delete_instance(recursive=True)
+
+        return visitante

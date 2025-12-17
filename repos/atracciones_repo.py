@@ -41,3 +41,12 @@ class AtraccionesRepo:
 
         return atraccion
 
+
+    @staticmethod
+    def eliminar_atraccion(atraccion_id):
+        atraccion = AtraccionesModel.get_or_none(AtraccionesModel.id == atraccion_id)
+
+        if atraccion:
+            atraccion.delete_instance()
+
+        return atraccion
