@@ -20,5 +20,21 @@ class TicketsRepo:
     
     @staticmethod
     def Buscar_todo_tickets():
+        return list(TicketsModel.select())
+    
+    @staticmethod
+    def obtener_tickets_por_visitante(visitante_id):
+        return list(
+            TicketsModel
+            .select()
+            .where(TicketsModel.visitante_id == visitante_id)
+        )
 
-            return list(TicketsModel.select())
+    @staticmethod
+    def obtener_tickets_por_atraccion(atraccion_id):
+        return list(
+            TicketsModel
+            .select()
+            .where(TicketsModel.atraccion_id == atraccion_id)
+        )
+

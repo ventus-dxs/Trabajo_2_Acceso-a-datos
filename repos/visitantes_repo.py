@@ -20,5 +20,18 @@ class VisitantesRepo:
 
     @staticmethod
     def Buscar_todo_visitantes():
+        return list(VisitantesModel.select())
 
-            return list(VisitantesModel.select())
+    @staticmethod
+    def obtener_visitantes_con_acceso_atraccion(atraccion_id):
+        query = (
+            VisitantesModel
+            .select()
+            .join(TicketsModel)
+            .where(
+                (TicketsModel.atraccion_id == atraccion_id) |
+                (TicketsModel.tipo_ticket == "general")
+            )
+            .distinct()
+        )
+        return list(query)

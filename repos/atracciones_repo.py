@@ -19,5 +19,13 @@ class AtraccionesRepo:
     
     @staticmethod
     def Buscar_todo_atracciones():
+        return list(AtraccionesModel.select())
 
-            return list(AtraccionesModel.select())
+
+    @staticmethod
+    def obtener_atracciones_activas():
+        return list(
+            AtraccionesModel
+            .select()
+            .where(AtraccionesModel.activa == True)
+        )
