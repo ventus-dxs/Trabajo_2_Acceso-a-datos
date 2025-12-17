@@ -37,4 +37,18 @@ class TicketsRepo:
             .select()
             .where(TicketsModel.atraccion_id == atraccion_id)
         )
+    
+    from datetime import datetime
+
+    @staticmethod
+    def marcar_ticket_como_usado(ticket_id):
+        ticket = TicketsModel.get_or_none(TicketsModel.id == ticket_id)
+
+        if ticket and not ticket.usado:
+            ticket.usado = True
+            ticket.fecha_uso = datetime.now()
+            ticket.save()
+
+        return ticket
+
 

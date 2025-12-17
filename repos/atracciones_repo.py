@@ -29,3 +29,15 @@ class AtraccionesRepo:
             .select()
             .where(AtraccionesModel.activa == True)
         )
+    
+
+    @staticmethod
+    def cambiar_estado_atraccion(atraccion_id, estado):
+        atraccion = AtraccionesModel.get_or_none(AtraccionesModel.id == atraccion_id)
+
+        if atraccion:
+            atraccion.activa = estado
+            atraccion.save()
+
+        return atraccion
+
