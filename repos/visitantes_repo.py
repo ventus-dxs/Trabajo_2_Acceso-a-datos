@@ -3,7 +3,7 @@ from playhouse.postgres_ext import *# type: ignore
 from models.visitantes_model import VisitantesModel
 from models.tickets_model import TicketsModel
 
-
+#Metodos de Visitantes del crud
 class VisitantesRepo:
     @staticmethod
     def crear_visitante(nombre, email, altura, fecha_registro,  preferencias_json):

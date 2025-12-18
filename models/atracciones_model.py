@@ -3,6 +3,7 @@ from peewee import *# type: ignore
 from playhouse.postgres_ext import *# type: ignore
 from datetime import datetime
 
+#Modelo de clase de Atracciones
 
 class AtraccionesModel(BaseModel):
     

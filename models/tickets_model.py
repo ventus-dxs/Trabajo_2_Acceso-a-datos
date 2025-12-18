@@ -4,6 +4,7 @@ from playhouse.postgres_ext import *# type: ignore
 from datetime import datetime
 
 
+#Clase de Modelo de Tickets
 class TicketsModel(BaseModel):
     id = AutoField()
 

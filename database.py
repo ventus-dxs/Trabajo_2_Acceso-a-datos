@@ -1,6 +1,8 @@
 from peewee import * # type: ignore
 import envyte # type: ignore
 
+
+#Base de datos de peewee
 db = PostgresqlDatabase(
     envyte.get("DATABASE"),
     host=envyte.get("HOST"),

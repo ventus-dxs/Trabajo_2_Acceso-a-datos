@@ -6,11 +6,13 @@ from repos.atracciones_repo import AtraccionesRepo
 from repos.tickets_repo import TicketsRepo
 import consultas
 
+
+#Menu Princupal de uso de la aplicacion
 visitantes_repo = VisitantesRepo()
 atracciones_repo = AtraccionesRepo()
 tickets_repo = TicketsRepo()
 
-
+#Metodos de creacion del menu
 def menu_principal():
     print("\n=== MENU BASE DE DATOS ===")
     print("1. Gestion de Visitantes")
@@ -58,7 +60,7 @@ def menu_consultas():
     print("0. Volver")
     return input("Opcion: ")
 
-
+#Metodo final de uso del menu
 def main():
     db.connect(reuse_if_open=True)
 

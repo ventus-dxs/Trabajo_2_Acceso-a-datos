@@ -3,6 +3,7 @@ from peewee import *# type: ignore
 from playhouse.postgres_ext import *# type: ignore
 from datetime import datetime
 
+#Modelo de creacion de la clase de Visitantes
 
 class VisitantesModel(BaseModel):
     nombre = CharField(null=False)

@@ -2,6 +2,7 @@ from peewee import *# type: ignore
 from playhouse.postgres_ext import *# type: ignore
 from models.atracciones_model import AtraccionesModel
 
+#Metodos del crud de Atracciones
 
 class AtraccionesRepo:
     @staticmethod

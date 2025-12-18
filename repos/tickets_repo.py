@@ -4,6 +4,8 @@ from models.tickets_model import TicketsModel
 from models.visitantes_model import VisitantesModel
 
 
+#Metodos del crud de Tickets
+
 class TicketsRepo:
     @staticmethod
     def crear_ticket(visitante_id, fecha_visita, tipo_ticket, detalles_compra_json, atraccion_id):
@@ -46,7 +48,7 @@ class TicketsRepo:
 
         if ticket and not ticket.usado:
             ticket.usado = True
-            ticket.fecha_uso = datetime.now()
+            ticket.fecha_uso = datetime.now()#type:ignore
             ticket.save()
 
         return ticket
